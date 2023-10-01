@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    box-sizing: border-box;
+    --primary: #7dbcea;
+    --secondary: #a435f0;
+}
