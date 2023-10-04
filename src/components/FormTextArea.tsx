@@ -1,15 +1,16 @@
-import { ColProps, Form, Input, InputProps } from "antd";
+import { ColProps, Form, Input } from "antd";
 import { FieldValues, useController, UseControllerProps } from "react-hook-form";
+import { TextAreaProps } from "antd/es/input";
 
 type FormInputProps = {
     controllerProps: UseControllerProps<FieldValues, any>;
     label?: string | React.ReactElement;
     labelCol?: ColProps | undefined;
-    inputProps?: InputProps;
+    inputProps?: TextAreaProps;
     isRequireForm?: boolean;
 };
 
-const FormInput = ({
+const FormTextArea = ({
     controllerProps,
     label,
     labelCol = { span: 24 },
@@ -30,9 +31,9 @@ const FormInput = ({
             help={error && error?.message}
             rules={[{ required: isRequireForm }]}
         >
-            <Input onChange={onChange} onBlur={onBlur} value={value} {...inputProps} autoComplete="off" />
+            <Input.TextArea onChange={onChange} onBlur={onBlur} value={value} {...inputProps} autoComplete="off" />
         </Form.Item>
     );
 };
 
-export default FormInput;
+export default FormTextArea;

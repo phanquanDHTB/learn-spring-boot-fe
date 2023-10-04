@@ -1,15 +1,15 @@
-import { ColProps, Form, Input, InputProps } from "antd";
+import { ColProps, Form, InputNumber, InputNumberProps } from "antd";
 import { FieldValues, useController, UseControllerProps } from "react-hook-form";
 
 type FormInputProps = {
     controllerProps: UseControllerProps<FieldValues, any>;
     label?: string | React.ReactElement;
     labelCol?: ColProps | undefined;
-    inputProps?: InputProps;
+    inputProps?: InputNumberProps;
     isRequireForm?: boolean;
 };
 
-const FormInput = ({
+const FormInputNum = ({
     controllerProps,
     label,
     labelCol = { span: 24 },
@@ -30,9 +30,9 @@ const FormInput = ({
             help={error && error?.message}
             rules={[{ required: isRequireForm }]}
         >
-            <Input onChange={onChange} onBlur={onBlur} value={value} {...inputProps} autoComplete="off" />
+            <InputNumber onChange={onChange} onBlur={onBlur} value={value} {...inputProps} size="large" />
         </Form.Item>
     );
 };
 
-export default FormInput;
+export default FormInputNum;

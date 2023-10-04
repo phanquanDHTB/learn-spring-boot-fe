@@ -15,7 +15,7 @@ export async function call(
     try {
         let auth_token;
         if (hasToken) {
-            auth_token = sessionStorage.getItem("key");
+            auth_token = localStorage.getItem("key");
         }
         if (token) {
             auth_token = token;
