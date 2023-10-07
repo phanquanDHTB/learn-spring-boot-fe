@@ -49,7 +49,7 @@ const Home = () => {
         debounceSearch.length ? getProductsByName() : getProductsByPage();
     }, [debounceSearch]);
     return (
-        <div className="mx-[50px]">
+        <div className="mx-[50px] min-h-[calc(100vh-112px)]">
             <Row className="flex justify-center py-3 items-center">
                 <label className=" font-medium mr-2">Tìm kiếm </label>
                 <Input

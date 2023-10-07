@@ -31,7 +31,7 @@ const ProductDetail = () => {
         getProductInfor();
     }, []);
     return (
-        <>
+        <div className="h-[calc(100vh-124px)]">
             <strong className="px-[50px] text-[17px] block my-3">Đặt hàng</strong>
             <div className="product-detail-wrap">
                 <img alt={productInfor?.name || ""} src={MockImg} className=" w-[30vw] rounded-2xl" />
@@ -59,7 +59,7 @@ const ProductDetail = () => {
                 </div>
                 <LoginForm ref={loginRef} />
             </div>
-        </>
+        </div>
     );
 };
 

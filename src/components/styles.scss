@@ -2,6 +2,7 @@
     @apply flex justify-between bg-primary-color items-center;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 .content-wrap {
